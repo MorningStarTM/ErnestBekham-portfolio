@@ -4,580 +4,505 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="description" content="Ernest Paul — Machine Learning Engineer &amp; Researcher working on reinforcement learning, motion &amp; pose foundation models, computer vision and power grid AI." />
+    <title>Ernest Paul — ML Engineer &amp; Researcher</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Ernest Paul</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <div class="noise"></div>
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <header id="site-header">
+      <nav class="nav-inner">
+        <a href="#home" class="logo">Ernest<span>.</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#research" data-nav>Research</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#experience" data-nav>Skills</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Ernest Paul</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ernest Paul</h1>
-        <p class="section__text__p2">Machine Learning Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Ernest_CV.pdf')"
-          >
-            Download CV
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+          <a class="btn btn-ghost resume-btn" href="./assets/Ernest%20MLE.pdf" target="_blank" rel="noopener">Resume</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
           </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ernest-beckham/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/MorningStarTM'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              
-              <h3>Education</h3>
-              <p>Bachelors in  Information Technology (honors)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am a seasoned technology professional with a strong foundation in machine learning, deep learning and a diverse skill set encompassing computer vision, natural language processing (NLP), transformers, Vision Transformers and large language models. 
-              My expertise lies in leveraging advanced machine learning techniques to tackle complex problems, applying innovative solutions to real-world scenarios. With a robust background in mathematics and a keen problem-solving aptitude, 
-              I have successfully undertaken numerous client projects. These experiences have not only honed my technical abilities but have also nurtured my ability to translate intricate concepts into actionable insights. 
-              I am passionate about pushing the boundaries of what is possible in the field of machine learning, continuously seeking opportunities to contribute to cutting-edge developments and make a meaningful impact.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Machine Learning</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Regression</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Classification</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>API</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MLOps</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>OpenCV</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PyTorch</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tensorflow</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Web Application</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>LLM</h3>
-                  <p>GPT, BERT</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Language and Other</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML & SS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Unity Engine</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Brain Tumor Claassification system</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/brain_cancer_detection.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Real Time Image Segmentation</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/image-segmentation-for-self-driving-car.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AI Content Detection using GPT-2</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/AI-Content-Detection.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-            
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-9.jpg"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Multi-Cancer Classification ViT</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/MulticancerViT.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.jpg"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Loan Approval system</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/end-to-end-loan-approval-system.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-5.jpg"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Lung Cancer Classification Using ViT</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/lung-cancer-classification.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-6.jpg"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Skull Stripping System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/skull-stripping.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-7.jpg"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Movie Review Sentiment Analysis</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/IMDB-movie-review-sentiment-analysis-.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-8.jpg"
-                alt="Project 5"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">NFT-Generator using DCGAN</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/MorningStarTM/nft-generation-GANs.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:ernestbeckham7324@gmail.com">ernestbeckham7324@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/ernest-beckham/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 Ernest Paul. All Rights Reserved.</p>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" data-nav>About</a>
+        <a href="#research" data-nav>Research</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#experience" data-nav>Skills</a>
+        <a href="#contact" data-nav>Contact</a>
+        <a href="./assets/Ernest%20MLE.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download Resume</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+          <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-inner">
+          <p class="eyebrow reveal">Hi, I'm</p>
+          <h1 class="hero-title reveal">Ernest&nbsp;Paul</h1>
+          <p class="hero-role reveal">
+            <span class="role-prefix">I work on</span>
+            <span class="role-text" id="role-text"></span><span class="type-cursor">&nbsp;</span>
+          </p>
+          <p class="hero-desc reveal">
+            Machine Learning Engineer &amp; independent researcher building reinforcement‑learning
+            agents, motion &amp; pose foundation models, and vision systems — currently exploring
+            language‑guided RL and large‑scale mocap pretraining.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-socials reveal">
+            <a href="https://github.com/MorningStarTM" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.27 7.77 10.77.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.74.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.19-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.3-5.19 5.59.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.12 0 .3.2.66.79.55a11.03 11.03 0 0 0 7.76-10.77C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kj-ernest-paul" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+            </a>
+            <a href="mailto:kjernest@gmail.com" aria-label="Email" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll down">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Get to know</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <div class="about-pic-frame">
+              <img src="./assets/self.jpg" alt="Ernest Paul" />
+            </div>
+            <div class="about-badge">
+              <span class="badge-dot"></span>
+              Based in Sri Lanka
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <p class="about-text mono-text">
+              I'm an ML Engineer focused on building production‑grade ML and AI systems
+              that solve real‑world problems.
+            </p>
+            <p class="about-text mono-text">
+              Currently at <strong>Home of Performance (HOP)</strong>, I design and build
+              LLM‑based systems and agentic workflows for clients, from architecture
+              through deployment.
+            </p>
+            <p class="about-text mono-text">
+              My research background spans reinforcement learning, power grid control,
+              LLMs &amp; SLMs, motion capture, and game AI — I enjoy working across both
+              ends, from research to production.
+            </p>
+
+            <div class="status-pill">
+              <span class="badge-dot"></span>
+              Open to freelance &amp; research collaborations
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num">20+</span>
+                <span class="stat-label">Research &amp; ML Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">5</span>
+                <span class="stat-label">Core Domains</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">B.IT</span>
+                <span class="stat-label">Honours Degree</span>
+              </div>
+            </div>
+
+            <div class="about-footer-row">
+              <div class="edu-chip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/></svg>
+                <span>Bachelor of Information Technology (Honours)</span>
+              </div>
+              <a href="https://github.com/MorningStarTM" target="_blank" rel="noopener" class="edu-chip link-chip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.27 7.77 10.77.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.74.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.19-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.3-5.19 5.59.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.12 0 .3.2.66.79.55a11.03 11.03 0 0 0 7.76-10.77C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                <span>@MorningStarTM on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH / EXPERTISE -->
+      <section id="research" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">What I work on</p>
+          <h2 class="section-title">Research &amp; Expertise</h2>
+        </div>
+
+        <div class="bento-grid reveal">
+          <article class="bento-card span-2">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3>Reinforcement Learning</h3>
+            <p>Hierarchical &amp; meta multi‑agent RL, PPO / SAC / A2C baselines, and AlphaZero‑style MCTS agents applied to power‑grid topology control (L2RPN) and physics‑driven combat environments.</p>
+            <div class="tag-row">
+              <span class="tag">Multi-Agent RL</span>
+              <span class="tag">MCTS</span>
+              <span class="tag">L2RPN</span>
+              <span class="tag">Dreamer</span>
+              <span class="tag">World Model</span>
+              <span class="tag">Meta RL</span>
+              <span class="tag">Simulations</span>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+            </div>
+            <h3>Motion &amp; Pose Models</h3>
+            <p>GPT‑ and Mamba‑style sequence models pretrained on large‑scale mocap data for human motion generation and prediction.</p>
+            <div class="tag-row">
+              <span class="tag">Mamba / SSM</span>
+              <span class="tag">Mocap</span>
+              <span class="tag">GPT</span>
+              <span class="tag">SMPL-X</span>
+              <span class="tag">IoT</span>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <h3>Computer Vision</h3>
+            <p>Vision Transformers for multi‑cancer &amp; lung‑cancer classification, segmentation for autonomous driving, and skull‑stripping pipelines.</p>
+            <div class="tag-row">
+              <span class="tag">ViT</span>
+              <span class="tag">Medical Imaging</span>
+              <span class="tag">YOLO</span>
+              <span class="tag">U-Net</span>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>
+            </div>
+            <h3>LLMs &amp; Agents</h3>
+            <p>Small‑LM coding agents, DSPy‑powered synthetic data generation, and low‑resource language modelling for Tamil.</p>
+            <div class="tag-row">
+              <span class="tag">DSPy</span>
+              <span class="tag">Agents</span>
+              <span class="tag">Ollama</span>
+            </div>
+          </article>
+
+          <article class="bento-card span-2">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg>
+            </div>
+            <h3>Power Grid AI</h3>
+            <p>Graph neural networks, neural‑guided A* search and hierarchical/meta RL for grid topology optimization and congestion management on the L2RPN benchmark.</p>
+            <div class="tag-row">
+              <span class="tag">GNNs</span>
+              <span class="tag">A* Search</span>
+              <span class="tag">Grid2Op</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid reveal">
+          <article class="project-card span-2">
+            <div class="project-top">
+              <span class="project-tag">Motion Foundation Model</span>
+            </div>
+            <h3>Leonidas</h3>
+            <p>Foundation model for human motion, pretrained on large‑scale mocap data spanning sports, combat, and tactical movement.</p>
+            <div class="tag-row">
+              <span class="tag">Mocap</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">Foundation Model</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/Leonidas" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Sequence Model</span></div>
+            <h3>GPSM‑1</h3>
+            <p>Generative Pre‑trained State Machine trained on large‑scale mocap data to predict and generate human motion.</p>
+            <div class="tag-row"><span class="tag">Mamba</span><span class="tag">SSM</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/GPSM-1" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Multi-Agent RL</span></div>
+            <h3>H‑MARL4PowerGridTopo</h3>
+            <p>Hierarchical multi‑agent reinforcement learning for power grid topology control on the L2RPN benchmark.</p>
+            <div class="tag-row"><span class="tag">GNN</span><span class="tag">HRL</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/H-MARL4PowerGridTopo" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Search + RL</span></div>
+            <h3>AlphaGrid</h3>
+            <p>AlphaZero‑based topology optimization agent for power grid congestion management using Monte Carlo Tree Search.</p>
+            <div class="tag-row"><span class="tag">MCTS</span><span class="tag">AlphaZero</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/AlphaGrid" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Search Algorithms</span></div>
+            <h3>GridStar</h3>
+            <p>Neural‑guided A* search for power grid topology optimization.</p>
+            <div class="tag-row"><span class="tag">A* Search</span><span class="tag">Grid2Op</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/GridStar" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">LLM Agent</span></div>
+            <h3>Nanocode</h3>
+            <p>Claude Code‑inspired coding agent powered by small language models instead of large LLMs.</p>
+            <div class="tag-row"><span class="tag">Small LMs</span><span class="tag">Agents</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/Nanocode" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">LLM Research</span></div>
+            <h3>project‑koperundevi</h3>
+            <p>A study of Large Language Models for the Tamil language — exploring low‑resource language modelling.</p>
+            <div class="tag-row"><span class="tag">NLP</span><span class="tag">Low-Resource</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/project-koperundevi" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Data Tooling</span></div>
+            <h3>Synthetic‑Data‑Generator</h3>
+            <p>A unified tool to generate synthetic text and sensor data using LLMs with the help of DSPy.</p>
+            <div class="tag-row"><span class="tag">DSPy</span><span class="tag">Synthetic Data</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/Synthetic-Data-Generator" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Computer Vision</span></div>
+            <h3>MulticancerViT</h3>
+            <p>Vision Transformer architecture for multi‑cancer image classification.</p>
+            <div class="tag-row"><span class="tag">ViT</span><span class="tag">Medical Imaging</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/MulticancerViT" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top"><span class="project-tag">Reinforcement Learning</span></div>
+            <h3>KAN‑Agents</h3>
+            <p>Deep reinforcement learning agents built with Kolmogorov–Arnold Networks (KAN).</p>
+            <div class="tag-row"><span class="tag">KAN</span><span class="tag">Deep RL</span></div>
+            <div class="project-links">
+              <a href="https://github.com/MorningStarTM/KAN-Agents" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-projects reveal">
+          <h3 class="more-title">More on GitHub</h3>
+          <div class="more-grid">
+            <a href="https://github.com/MorningStarTM/TrendForge" target="_blank" rel="noopener" class="more-link"><span>TrendForge</span><em>AI trend detection &amp; content engine</em></a>
+            <a href="https://github.com/MorningStarTM/RendrAI" target="_blank" rel="noopener" class="more-link"><span>RendrAI</span><em>Creative‑brief → image pipeline</em></a>
+            <a href="https://github.com/MorningStarTM/grid-baseline-agent" target="_blank" rel="noopener" class="more-link"><span>grid-baseline-agent</span><em>PPO / A2C / SACD baselines on L2RPN</em></a>
+            <a href="https://github.com/MorningStarTM/KAN-PPO" target="_blank" rel="noopener" class="more-link"><span>KAN-PPO</span><em>KAN‑integrated PPO study</em></a>
+            <a href="https://github.com/MorningStarTM/Mocap2Combat" target="_blank" rel="noopener" class="more-link"><span>Mocap2Combat</span><em>Motion‑prior RL for combat agents</em></a>
+            <a href="https://github.com/MorningStarTM/kick-boxer-gym" target="_blank" rel="noopener" class="more-link"><span>kick-boxer-gym</span><em>PyBullet 1v1 kickboxing RL env</em></a>
+            <a href="https://github.com/MorningStarTM/escape_room" target="_blank" rel="noopener" class="more-link"><span>escape_room</span><em>RL benchmark for memory &amp; POMDPs</em></a>
+            <a href="https://github.com/MorningStarTM/brain_cancer_detection" target="_blank" rel="noopener" class="more-link"><span>Brain Tumor Classification</span><em>Deep learning diagnosis system</em></a>
+            <a href="https://github.com/MorningStarTM/image-segmentation-for-self-driving-car" target="_blank" rel="noopener" class="more-link"><span>Image Segmentation</span><em>Real‑time segmentation for self‑driving</em></a>
+            <a href="https://github.com/MorningStarTM/lung-cancer-classification" target="_blank" rel="noopener" class="more-link"><span>Lung Cancer Classification</span><em>ViT‑based classification</em></a>
+            <a href="https://github.com/MorningStarTM/skull-stripping" target="_blank" rel="noopener" class="more-link"><span>Skull Stripping</span><em>Medical image preprocessing</em></a>
+            <a href="https://github.com/MorningStarTM/nft-generation-GANs" target="_blank" rel="noopener" class="more-link"><span>NFT Generator</span><em>DCGAN‑based image generation</em></a>
+          </div>
+          <a href="https://github.com/MorningStarTM?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost view-all-btn">View all repositories →</a>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="experience" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Toolbox</p>
+          <h2 class="section-title">Skills &amp; Stack</h2>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">C++</span>
+              <span class="tag">C</span>
+              <span class="tag">C#</span>
+              <span class="tag">Java</span>
+              <span class="tag">HTML &amp; CSS</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>ML / DL Frameworks</h3>
+            <div class="tag-row">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">MLOps</span>
+              <span class="tag">MLflow</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>RL &amp; Simulation</h3>
+            <div class="tag-row">
+              <span class="tag">Grid2Op / L2RPN</span>
+              <span class="tag">PyBullet</span>
+              <span class="tag">OpenAI Gym</span>
+              <span class="tag">MCTS</span>
+              <span class="tag">Baseline Agents</span>
+              <span class="tag">World Models</span>
+              <span class="tag">Dreamer</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Vision &amp; Generative</h3>
+            <div class="tag-row">
+              <span class="tag">OpenCV</span>
+              <span class="tag">Vision Transformers</span>
+              <span class="tag">GANs</span>
+              <span class="tag">Diffusion</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>LLM Tooling</h3>
+            <div class="tag-row">
+              <span class="tag">DSPy</span>
+              <span class="tag">Hugging Face</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">LLMOps</span>
+              <span class="tag">AWS Bedrock</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Agentic AI</span>
+              <span class="tag">MCP</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Infra &amp; Tools</h3>
+            <div class="tag-row">
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">AWS</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Pulumi</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="contact-card reveal">
+          <div class="contact-left">
+            <p class="eyebrow">Get in touch</p>
+            <h2 class="section-title">Let's build something</h2>
+            <p class="contact-desc">
+              Open to research collaborations, ML engineering roles, and interesting problems
+              in reinforcement learning or computer vision. Reach out.
+            </p>
+          </div>
+          <div class="contact-right">
+            <a href="mailto:kjernest@gmail.com" class="contact-row">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+              </span>
+              <span>kjernest@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kj-ernest-paul" target="_blank" rel="noopener" class="contact-row">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.33V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+              </span>
+              <span>www.linkedin.com/in/kj-ernest-paul</span>
+            </a>
+            <a href="https://github.com/MorningStarTM" target="_blank" rel="noopener" class="contact-row">
+              <span class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.27 7.77 10.77.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.3-1.26-1.65-1.26-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.74.4-1.23.72-1.51-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.73 0c2.19-1.47 3.14-1.16 3.14-1.16.63 1.57.24 2.73.12 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.66 5.3-5.19 5.59.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.12 0 .3.2.66.79.55a11.03 11.03 0 0 0 7.76-10.77C23.02 5.24 18.27.5 12 .5Z"/></svg>
+              </span>
+              <span>github.com/MorningStarTM</span>
+            </a>
+            <a href="./assets/Ernest%20MLE.pdf" target="_blank" rel="noopener" class="btn btn-primary contact-cta">Download Resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2023 Ernest Paul. Built from scratch, trained with patience.</p>
     </footer>
+
+    <button id="back-to-top" class="icon-btn back-to-top" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,103 +1,127 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+/* ===================== Tablet (<= 1024px) ===================== */
+@media screen and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
+  .about-media {
+    max-width: 360px;
+    margin: 0 auto;
   }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  .bento-card.span-2 {
+    grid-column: span 2;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .project-card.span-2 {
+    grid-column: span 2;
   }
-  article {
-    font-size: 1rem;
+
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: 2.4rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .contact-left .section-title {
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  .contact-left .eyebrow,
+  .contact-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+}
+
+/* ===================== Small tablet / large phone (<= 860px) ===================== */
+@media screen and (max-width: 860px) {
+  .nav-links {
+    display: none;
   }
-  .title {
-    font-size: 2rem;
+
+  .hamburger {
+    display: flex;
   }
-  .text-container {
-    text-align: justify;
+
+  .bento-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .more-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== Mobile (<= 600px) ===================== */
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 110px 1.25rem 50px;
+  }
+
+  .nav-inner {
+    padding: 1rem 1.25rem;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 110px 1.25rem 60px;
+  }
+
+  .hero-desc {
+    font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .bento-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card.span-2,
+  .project-card.span-2 {
+    grid-column: span 1;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-stats .stat-card:last-child {
+    grid-column: span 2;
+  }
+
+  .more-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .more-link em {
+    text-align: left;
+  }
+
+  .contact-card {
+    padding: 1.8rem;
+  }
+
+  .back-to-top {
+    bottom: 18px;
+    right: 18px;
   }
 }
